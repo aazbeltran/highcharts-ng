@@ -174,6 +174,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' && module.ex
       } else {
         mergedOptions = defaultOptions;
       }
+	  console.log(mergedOptions);
       mergedOptions.chart.renderTo = element[0];
 
       angular.forEach(axisNames, function(axisName) {
@@ -219,6 +220,42 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' && module.ex
 
       if(config.title) {
         mergedOptions.title = config.title;
+      }
+      if(config.tooltip) {
+        mergedOptions.tooltip = config.tooltip;
+      }
+      if(config.colors) {
+        mergedOptions.colors = config.colors;
+      }
+      if(config.data) {
+        mergedOptions.data = config.data;
+      }
+      if(config.drilldown) {
+        mergedOptions.drilldown = config.drilldown;
+      }
+      if(config.exporting) {
+        mergedOptions.exporting = config.exporting;
+      }
+      if(config.labels) {
+        mergedOptions.labels = config.labels;
+      }
+      if(config.legend) {
+        mergedOptions.legend = config.legend;
+      }
+      if(config.loading) {
+        mergedOptions.loading = config.loading;
+      }
+      if(config.navigation) {
+        mergedOptions.navigation = config.navigation;
+      }
+      if(config.noData) {
+        mergedOptions.noData = config.noData;
+      }
+      if(config.pane) {
+        mergedOptions.pane = config.pane;
+      }
+      if(config.plotOptions) {
+        mergedOptions.plotOptions = config.plotOptions;
       }
       if (config.subtitle) {
         mergedOptions.subtitle = config.subtitle;
@@ -370,7 +407,6 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' && module.ex
 
         };
         initChart();
-
 
         if(scope.disableDataWatch){
           scope.$watchCollection('config.series', function (newSeries, oldSeries) {

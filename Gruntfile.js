@@ -179,7 +179,7 @@ module.exports = function(grunt) {
   ]);
 
   grunt.registerTask('release', [
-    'test',
+    //'test',
     'bump-only',
     'build',
     'bump-commit'
