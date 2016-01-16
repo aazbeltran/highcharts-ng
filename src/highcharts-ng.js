@@ -225,8 +225,8 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' && module.ex
       if(config.tooltip) {
         mergedOptions.tooltip = config.tooltip;
       }
-      if(config.chart.type) {
-        mergedOptions.chart.type = config.chart.type;
+      if(config.chart) {
+        jQuery.extend(mergedOptions.chart, config.chart);
       }
       if(config.colors) {
         mergedOptions.colors = config.colors;
