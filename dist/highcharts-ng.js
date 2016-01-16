@@ -153,7 +153,8 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' && module.ex
 
       var defaultOptions = {
         chart: {
-          events: {}
+          events: {},
+          type:''
         },
         title: {},
         subtitle: {},
@@ -174,7 +175,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' && module.ex
       } else {
         mergedOptions = defaultOptions;
       }
-	  console.log(mergedOptions);
+
       mergedOptions.chart.renderTo = element[0];
 
       angular.forEach(axisNames, function(axisName) {
@@ -223,6 +224,9 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' && module.ex
       }
       if(config.tooltip) {
         mergedOptions.tooltip = config.tooltip;
+      }
+      if(config.chart.type) {
+        mergedOptions.chart.type = config.chart.type;
       }
       if(config.colors) {
         mergedOptions.colors = config.colors;
